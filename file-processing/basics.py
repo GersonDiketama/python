@@ -1,11 +1,11 @@
 
 
-myfile = open("files/fruits.txt")
+myfile = open("file-processing/files/fruits.txt")
 print(myfile.read())
 
 # this is if I want to read the content many times
 
-file = open("files/fruits.txt")
+file = open("file-processing/files/fruits.txt")
 content = file.read()
 
 print(content)
@@ -15,7 +15,7 @@ print(content)
 
 # better way to read file
 
-with open("files/fruits.txt") as myfiles:
+with open("file-processing/files/fruits.txt") as myfiles:
     # this will read and close it
     contents = myfiles.read()
 
@@ -24,7 +24,7 @@ print(content)
 
 # Writing into a file
 
-with open("files/vegetables.txt", "w") as writfile:
+with open("file-processing/files/vegetables.txt", "w") as writfile:
     cont = writfile.write("Tomato\nCucumber\nOnion\Gerson")
 
 print(cont)
@@ -39,9 +39,9 @@ with open("bear.txt") as myfile:
         cont = newfile.write(chart)
 
 
-# Appending to a text file
+# Appending to exisiting text file
 
-with open("files/vegetables.txt", "a+") as myfile:
+with open("file-processing/files/vegetables.txt", "a+") as myfile:
     myfile.write("\nOkra")
     myfile.seek(0)
     content = myfile.read()
